@@ -9,6 +9,6 @@ export const routes = Router()
 routes.use('/create', createPost)
 routes.use('/find', findAllPost)
 routes.use('/find/:id', findOnePostById)
-routes.use('/delete', deletePostById)
+routes.use('/delete/:id', deletePostById)
 
 // https://b8ad-200-124-166-224.ngrok.io/api
