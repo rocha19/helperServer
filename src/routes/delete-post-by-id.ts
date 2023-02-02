@@ -3,4 +3,4 @@ import { Router } from 'express'
 
 export const deletePostById = Router()
 const deletePostByIdController = new DeletePostByIdController()
-deletePostById.delete('/', deletePostByIdController.handle)
+deletePostById.delete('/:id', deletePostByIdController.handle)
