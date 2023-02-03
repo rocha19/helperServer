@@ -3,4 +3,5 @@ export type Posts = {
   name: string
   post: string
   uri?: string
+  createdAt?: string
 }

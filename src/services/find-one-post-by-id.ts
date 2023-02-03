@@ -9,9 +9,14 @@ export class FindOnePostByIdService {
       select: {
         name: true,
         post: true,
-        uri: true
+        uri: true,
+        created_at: true
       }
     })
-    return post
+    if (!post) throw new Error('Post not found!')
+    return {
+      ...post,
+      createdAt: new Date(post.created_at).toISOString()
+    }
   }
 }
