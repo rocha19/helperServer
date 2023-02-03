@@ -13,7 +13,10 @@ export class FindAllPostService {
     })
     const treatedPosts = posts.map(post => {
       return {
-        ...post,
+        id: post.id,
+        name: post.name,
+        post: post.post,
+        uri: post.uri,
         createdAt: new Date(post.created_at).toISOString()
       }
     })

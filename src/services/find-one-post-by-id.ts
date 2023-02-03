@@ -15,7 +15,10 @@ export class FindOnePostByIdService {
     })
     if (!post) throw new Error('Post not found!')
     return {
-      ...post,
+      id,
+      name: post.name,
+      post: post.post,
+      uri: post.uri,
       createdAt: new Date(post.created_at).toISOString()
     }
   }
